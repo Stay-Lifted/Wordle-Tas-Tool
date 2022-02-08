@@ -2,7 +2,7 @@
 ## Terminal application for solving Wordle puzzles
 
 Wordle Tas Tool (WTT) is a Python script that iterates over SCOWL95 to solve Wordle puzzles.
-Once the user inputs their guess and Wordles reaction, WTT will remove invalid words and
+Once the user inputs their guess and Wordle's reaction, WTT will remove invalid words and
 suggest the user's next move using English word usage data.
 
 This code was designed to be versatile and work in more contexts than standard Wordle
