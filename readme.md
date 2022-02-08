@@ -8,6 +8,10 @@ suggest the user's next move using English word usage data.
 This code was designed to be versatile and work in more contexts than standard Wordle
 gameplay provides. Please feel free to modify the code or use it in your own projects!
 
+##Running
+
+`python3 wordletas.py`
+
 ##Python Dependancies
 
 This project requires the packages wordfreq and colored. You can use the following commands
