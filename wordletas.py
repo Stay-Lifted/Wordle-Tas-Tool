@@ -24,17 +24,18 @@
 import wordletasterminal
 import wordtasmodule
 
-candidates = wordtasmodule.generate_candidates()
+def main():
+    candidates = wordtasmodule.generate_candidates()
+    for i in range(1, 7):
+        wordletasterminal.round_header(i, len(candidates))
+        guess = wordletasterminal.get_guess()
+        wordletasterminal.win_condition()
+        green_letters = wordletasterminal.get_green()
+        yellow_letters = wordletasterminal.get_yellow()
 
-for i in range(1, 7):
-    wordletasterminal.round_header(i, len(candidates))
-    guess = wordletasterminal.get_guess()
-    wordletasterminal.win_condition()
-    green_letters = wordletasterminal.get_green()
-    yellow_letters = wordletasterminal.get_yellow()
+        candidates = wordtasmodule.refine_candidates(guess, green_letters, yellow_letters, candidates)
 
-    candidates = wordtasmodule.refine_candidates(guess, green_letters, yellow_letters, candidates)
+        wordletasterminal.suggest(candidates)
 
-    wordletasterminal.suggest(candidates)
-
-print('Bye!')
+if __name__ == '__main__':
+    main()
