@@ -13,8 +13,8 @@ with open('Scowl95', 'r') as Scowl:
         english_language.add(word.strip().lower())
 
 
-## Takes the number of letters as a parameter
-## Returns a dictionary of matching words and their usage frequency
+# Takes the number of letters as a parameter
+# Returns a dictionary of matching words and their usage frequency
 
 def generate_candidates(number_of_letters: int = 5, 
                         word_set: set = english_language) -> dict:
@@ -37,8 +37,8 @@ def generate_candidates(number_of_letters: int = 5,
     return word_dict
 
 
-## Takes the user's guess and wordle's outputs as parameters
-## Returns a refined list of word candidates
+# Takes the user's guess and wordle's outputs as parameters
+# Returns a refined list of word candidates
 
 def refine_candidates(guess: str, green_letters: str,
                       yellow_letters: str, candidates: dict) -> dict:
@@ -82,8 +82,8 @@ def refine_candidates(guess: str, green_letters: str,
     return generate_candidates(word_set = valid_words)
 
 
-## Takes the dictionary of valid words as a parameter
-## Returns a list the top 5 best guesses based on word usage
+# Takes the dictionary of valid words as a parameter
+# Returns a list the top 5 best guesses based on word usage
 
 def generate_guess(candidates: dict) -> list:
     usage_values = list(candidates.values())
