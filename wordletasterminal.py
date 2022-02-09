@@ -15,7 +15,7 @@ def round_header(round_number: int = 1, words_left: int = -100):
     print('Round ' + str(round_number) + '. There are currently ' + str(words_left) + ' possible answers.')
 
 def get_guess() -> str:
-    print('Input your first guess.')
+    print('Input your guess.')
     guess = input('\nGuess: ')
     return guess
 
